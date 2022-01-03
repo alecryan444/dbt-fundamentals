@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_game_events
+    description: 1 row per unique game event.
+    columns: 
+      - name: play_id
+        tests:
+          - unique
+          - not_null
+      - name: x_coor
+        description: '{{ doc("stg_game_events_x_coor") }}'
+      - name: y_coor
+        description: '{{ doc("stg_game_events_y_coor") }}'
